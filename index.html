@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>practice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+    
+</head>
+<body>
+    <h1>
+        Draw your own picture
+    </h1>
+    <p>set width
+    <input type="text" onchange="setWidth(this.value)"/> set height
+    <input type="text" onchange="setheight(this.value)"/></p>
+    <canvas id="canvas1" onmousedown="startpaint()" onmousemove="dopaint(event.offsetX,event.offsetY)" onmouseup="endpaint()"></canvas>
+<p>Brush color <input type="color" onchange="setcolor(this.value)"> Brush size <input type="range" id="sizeinput" min="1" max="50" value="5" oninput="resizebrush(this.value)"> <output id="sizeout" >5</output></output></p>
+<p><input type="button" onclick="clearCanvas()" value="clear canvas" ></p>
+</body>
+<script type="text/javascript" src="script.js"></script>
+
+</html>
