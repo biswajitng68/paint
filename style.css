@@ -1,11 +1,37 @@
 #canvas1{
     border:1px blueviolet;
-    background-color: gray;
-   
+    
+   margin: auto;
+   margin-left: 50px;
 }
 body{
-    background-color: #e9967a;
+    background-image: radial-gradient(red, green, violet, chocolate);
+    margin: 10px;
+    padding: 0;
 }
 p{
     font-size: 1.5em;
+  
 }
+#button{
+    background-color: indianred;
+    border-radius: 1.2em;
+    box-shadow: 0 0 0 1px #1C318D,
+    0 0 0 2px #3955C7,
+    0 0 0 3px #546DC7,
+    0 0 0 4px #7284D8;
+    font-size: 1.1em;
+}
+#f{
+    background-image: linear-gradient(white,rgb(97, 97, 114),black);
+    padding: 2px;
+    border-radius: 0.5em;
+    margin: 3px;
+    margin-bottom: 7px;}
+    h1{
+        text-align: center;
+        font-size: 2em;
+    }
+input[button]:active{
+    box-shadow: unset;
+}    

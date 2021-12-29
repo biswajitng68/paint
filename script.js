@@ -4,7 +4,7 @@ var color = 'black';
 var radius = 5;
 // only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
-
+paintcanvas.style.backgroundColor="white";
 function setWidth (value) {
 if(isNumeric(value)){
  paintcanvas.width=value;
@@ -51,4 +51,15 @@ function isNumeric (value) {
  // standard JavaScript function to determine whether a string is an illegal number (Not-a-Number)
  return !isNaN(value);
 }
- 
+function upload(){
+    var imgcanvas=document.getElementById("canvas1");
+
+    var file=document.getElementById("finput");
+    var image=new SimpleImage(file);
+    image.drawTo(imgcanvas);
+    
+}
+function bgcolor(value){
+    
+    paintcanvas.style.backgroundColor=value;
+}
