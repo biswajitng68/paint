@@ -2,6 +2,8 @@ var paintcanvas=document.getElementById("canvas1");
 var context = paintcanvas.getContext("2d");
 var color = 'black';
 var radius = 5;
+alert("Here you can change your photos and also draw your own paintings");
+alert("just right click on your canvas and save images");
 // only paint if mouse is being dragged (moved while the button is pressed)
 var isPainting = false;
 paintcanvas.style.backgroundColor="white";
