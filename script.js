@@ -54,8 +54,94 @@ function isNumeric (value) {
  return !isNaN(value);
 }
 function bgcolor(value){
-    
-   paintcanvas.style.backgroundColor=value;
+  context.fillStyle=value;
+   context.fillRect(0,0,paintcanvas.width,paintcanvas.height);
+   
+   
+}
+function neg() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = 255-imgData.data[i];
+    imgData.data[i+1] = 255-imgData.data[i+1];
+    imgData.data[i+2] = 255-imgData.data[i+2];
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function brow() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/3;
+    imgData.data[i+1] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/3;
+    imgData.data[i+2] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/3;
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function cool() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/4;
+    imgData.data[i+1] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/4;
+    imgData.data[i+2] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])/4;
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function coola() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])*1.2/3;
+    imgData.data[i+1] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])*1.2/3;
+    imgData.data[i+2] = (imgData.data[i]+imgData.data[i+1]+imgData.data[i+2])*1.2/3;
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function redf() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = imgData.data[i]+10;
+    imgData.data[i+1] = imgData.data[i+1];
+    imgData.data[i+2] = imgData.data[i+2];
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function greenf() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = imgData.data[i];
+    imgData.data[i+1] = imgData.data[i+1]+10;
+    imgData.data[i+2] = imgData.data[i+2];
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
+}
+function bluef() {
+  var imgData = context.getImageData(0, 0, paintcanvas.width, paintcanvas.height);
+
+  
+  for (var i = 0; i < imgData.data.length; i += 4) {
+    imgData.data[i] = imgData.data[i];
+    imgData.data[i+1] = imgData.data[i+1];
+    imgData.data[i+2] = imgData.data[i+2]+10;
+    imgData.data[i+3] = 255;
+  }
+  context.putImageData(imgData, 0, 0);
 }
 let imgInput = document.getElementById('finput');
   imgInput.addEventListener('change', function(e) {
