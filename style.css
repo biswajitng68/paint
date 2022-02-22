@@ -5,7 +5,7 @@
    margin-left: 50px;
 }
 body{
-    background-image: radial-gradient(red, green, violet, chocolate);
+    background-image: radial-gradient(rgb(202, 133, 133), rgb(145, 236, 145), rgb(203, 215, 233), rgb(109, 76, 53));
     margin: 10px;
     padding: 0;
 }
@@ -27,6 +27,7 @@ p{
     padding: 2px;
     border-radius: 0.5em;
     margin: 3px;
+   padding-left: 50px;
     margin-bottom: 7px;}
     h1{
         text-align: center;
@@ -35,3 +36,12 @@ p{
 input[button]:active{
     box-shadow: unset;
 }    
+.edb{
+    background-color: rgb(185, 238, 62);
+    border-radius: 1.5em;
+    box-shadow: 0 0 0 1px #1c8d42,
+    0 0 0 2px #75e2e6,
+    0 0 0 3px #67c754,
+    0 0 0 4px #72d880;
+    margin-left: 10px;
+}
